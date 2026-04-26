@@ -92,7 +92,7 @@ app.use((err, req, res, _next) => {
 // ── Server Start ──────────────────────────────────────────────────────
 
 if (process.env.NODE_ENV !== 'test') {
-  app.listen(config.port, () => {
+  app.listen(config.port, '0.0.0.0', () => {
     logger.info(`🌉 ImpactBridge running on port ${config.port}`);
   });
 }
