@@ -14,7 +14,6 @@ import config from './config.js';
 /** @type {import('pino').Logger} */
 export const logger = pino({
   level: config.logLevel,
-  transport: config.nodeEnv !== 'production' ? { target: 'pino-pretty' } : undefined,
 });
 
 /** @type {GoogleGenerativeAI} */
